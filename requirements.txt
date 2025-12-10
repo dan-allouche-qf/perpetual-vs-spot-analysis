@@ -1,0 +1,20 @@
+# Requirements for perpetual_vs_spot_analysis.ipynb
+# Comparative Analysis of Perpetual vs Spot Contracts: Cost-Benefit Evaluation for Long Positions on Bitcoin
+
+# HTTP requests for Binance API
+requests>=2.31.0
+
+# Data manipulation and analysis
+pandas>=2.0.0
+numpy>=1.24.0
+
+# Data visualization
+plotly>=5.17.0
+matplotlib>=3.7.0
+
+# Interactive web application with Dash
+dash>=2.14.0
+
+# Jupyter notebook support for Plotly rendering
+nbformat>=4.2.0
+ipython>=8.0.0
