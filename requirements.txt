@@ -1,0 +1,14 @@
+# Pinned runtime dependencies (the versions this snapshot's results were produced with).
+# pyproject.toml is the authoritative spec; this file is for a quick
+#   pip install -r requirements.txt
+# Dev/app extras (pytest, ruff, mypy, jupytext, dash) live in pyproject's extras:
+#   pip install -e ".[dev,app]"
+
+requests==2.34.2
+pandas==3.0.3
+numpy==2.4.6
+scipy==1.17.1
+statsmodels==0.14.6
+plotly==6.8.0
+matplotlib==3.11.0
+pyarrow==24.0.0

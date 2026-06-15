@@ -1,0 +1,56 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "perp-spot"
+version = "0.1.0"
+description = "Funding-carry and leverage research on crypto perpetual vs spot markets"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "Dan Allouche" }]
+dependencies = [
+    "requests>=2.31,<3",
+    "pandas>=2.2,<4",
+    "numpy>=1.26,<3",
+    "scipy>=1.11,<2",
+    "statsmodels>=0.14,<1",
+    "plotly>=5.17,<7",
+    "matplotlib>=3.8,<4",
+    "pyarrow>=14",
+]
+
+[project.optional-dependencies]
+app = ["dash>=2.14,<4"]
+dev = [
+    "pytest>=8",
+    "ruff>=0.6",
+    "mypy>=1.10",
+    "jupytext>=1.16",
+    "nbconvert>=7",
+    "ipykernel>=6",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+src = ["src", "tests", "scripts"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM", "PD"]
+ignore = ["E501"]
+
+[tool.mypy]
+python_version = "3.11"
+packages = ["perp_spot"]
+ignore_missing_imports = true
+warn_unused_ignores = true
+no_implicit_optional = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
